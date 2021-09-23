@@ -1,0 +1,50 @@
+[
+	{
+		"id": 2,
+		"paciente": {
+			"id": 1,
+			"nombre": "Carolina",
+			"apellido": "das Dores",
+			"dni": "89.892.999-00",
+			"fechaIngreso": "2021-09-23T01:03:14.948+00:00",
+			"domicilio": {
+				"id": 1,
+				"calle": "calle digital",
+				"numero": "km7",
+				"localidad": "centro",
+				"provincia": "LANUS"
+			}
+		},
+		"odontologo": {
+			"id": 1,
+			"nombre": "Paulo",
+			"apellido": "Pereira",
+			"matricula": 333
+		},
+		"date": "2021-11-07T14:18:35.936+00:00"
+	},
+	{
+		"id": 2,
+		"paciente": {
+			"id": 2,
+			"nombre": "Heitor",
+			"apellido": "Silva",
+			"dni": "23.399.000-11",
+			"fechaIngreso": "2019-05-11T01:00:05.431+00:00",
+			"domicilio": {
+				"id": 2,
+				"calle": "calle heitor",
+				"numero": "20A",
+				"localidad": "centro",
+				"provincia": "CABA"
+			}
+		},
+		"odontologo": {
+			"id": 1,
+			"nombre": "Paulo",
+			"apellido": "Pereira",
+			"matricula": 333
+		},
+		"date": "2021-12-24T14:00:45.936+00:00"
+	}
+]
