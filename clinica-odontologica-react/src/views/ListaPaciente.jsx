@@ -36,7 +36,7 @@ const ListaPaciente = () => {
 							<td>Apellido</td>
 							<td>Dni</td>
 							<td>Fecha Ingreso</td>
-							<td>Domicilio</td>
+							<td>Provincia</td>
 						</tr>
 					</thead>
 					<tbody>
