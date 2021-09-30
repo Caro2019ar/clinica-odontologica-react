@@ -29,12 +29,16 @@ const InputOdonto = () => {
 				console.log("Catch do axios");
 			});
 		document.querySelector("form").reset();
+		const refreshPage = () => {
+			window.location.reload();
+		};
+		refreshPage();
 	};
 
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
-				<h1>Formulario</h1>
+				<h1>Agregar odontologo</h1>
 				<p>Nombre</p>
 				<input
 					type="text"

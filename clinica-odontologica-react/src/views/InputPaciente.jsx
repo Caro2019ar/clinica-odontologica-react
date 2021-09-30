@@ -29,6 +29,11 @@ const InputPaciente = () => {
 			url: urlPaciente,
 			method: "post",
 			data: payload,
+			headers: {
+				"Access-Control-Allow-Origin": "*",
+				"Access-Control-Allow-Headers":
+					"Origin, X-Requested-With, Content-Type, Accept",
+			},
 		})
 			.then(() => {
 				console.log("Enviado para el Back");
@@ -37,12 +42,16 @@ const InputPaciente = () => {
 				console.log("Catch do axios");
 			});
 		document.querySelector("form").reset();
+		const refreshPage = () => {
+			window.location.reload();
+		};
+		refreshPage();
 	};
 
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
-				<h1>Formulario</h1>
+				<h1>Agregar Paciente</h1>
 				<p>Nombre</p>
 				<input
 					type="text"
@@ -89,18 +98,6 @@ const InputPaciente = () => {
 						}));
 					}}
 				/>
-
-				<p>Provincia</p>
-				<input
-					type="text"
-					name="provincia"
-					onChange={(event) => {
-						setState((state) => ({
-							...state,
-							domicilio: { ...state.domicilio, provincia: event.target.value },
-						}));
-					}}
-				/>
 				<p>Localidad</p>
 				<input
 					type="text"
@@ -109,6 +106,17 @@ const InputPaciente = () => {
 						setState((state) => ({
 							...state,
 							domicilio: { ...state.domicilio, localidad: event.target.value },
+						}));
+					}}
+				/>
+				<p>Provincia</p>
+				<input
+					type="text"
+					name="provincia"
+					onChange={(event) => {
+						setState((state) => ({
+							...state,
+							domicilio: { ...state.domicilio, provincia: event.target.value },
 						}));
 					}}
 				/>

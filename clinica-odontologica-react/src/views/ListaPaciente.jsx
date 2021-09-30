@@ -10,10 +10,11 @@ const ListaPaciente = () => {
 	useEffect(() => {
 		const cargarData = async () => {
 			try {
-				let response = await axios(dataPacientes);
+				let response = await axios({
+					method: "get",
+					url: dataPacientes,
+				});
 				setPacientes(response.data);
-				//let response = dataPacientes;
-				//setPacientes(response);
 			} catch (error) {
 				console.log("error", error);
 			}

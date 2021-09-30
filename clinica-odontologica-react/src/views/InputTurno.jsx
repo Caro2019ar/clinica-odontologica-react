@@ -39,18 +39,27 @@ const InputTurno = () => {
 				console.log("Catch do axios");
 			});
 		document.querySelector("form").reset();
+		const refreshPage = () => {
+			window.location.reload();
+		};
+		refreshPage();
 	};
-	console.log("Odontologo, dados: ", pacienteId, odontologoId, fecha);
+	
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
-				<h1>Formulario</h1>
+				<h1>Agregar Turno</h1>
 				<p>ID del paciente</p>
 				<input type="number" name="pacienteId" onChange={handleChange} />
 				<p>ID del odontologo</p>
 				<input type="number" name="odontologoId" onChange={handleChange} />
-				<p>Fecha del turno</p>
-				<input type="text" name="fecha" onChange={handleChange} />
+				<p>Fecha y hora del turno</p>
+				<input
+					type="text"
+					name="fecha"
+					placeholder="dd/mm/aaaa HH:mm"
+					onChange={handleChange}
+				/>
 				<input type="submit" />
 			</form>
 		</div>
