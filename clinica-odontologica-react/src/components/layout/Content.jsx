@@ -5,7 +5,6 @@ import OdontologoComponent from "../../views/OdontologoComponent";
 import PacienteComponent from "../../views/PacienteComponent";
 import TurnoComponent from "../../views/TurnoComponent";
 import Home from "../../views/Home";
-import NotFound from "../../views/NotFound";
 
 const Content = (props) => (
 	<main className="Content">
@@ -21,9 +20,6 @@ const Content = (props) => (
 			</Route>
 			<Route path="/turnos">
 				<TurnoComponent />
-			</Route>
-			<Route path="*">
-				<NotFound />
 			</Route>
 		</Switch>
 	</main>

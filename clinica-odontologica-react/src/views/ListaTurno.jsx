@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SectionTitle from "../components/layout/SectionTitle";
 import axios from "axios";
 const dataTurnos = "http://localhost:8080/turnos";
-//import dataTurnos from "../data/dataTurnos.json";
+
 const ListaTurno = () => {
 	const [turnos, setturnos] = useState([]);
 
@@ -11,8 +11,6 @@ const ListaTurno = () => {
 			try {
 				let response = await axios(dataTurnos);
 				setturnos(response.data);
-				//let response = dataTurnos;
-				//setturnos(response);
 			} catch (error) {
 				console.log("error", error);
 			}

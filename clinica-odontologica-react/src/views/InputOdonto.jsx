@@ -11,6 +11,7 @@ const InputOdonto = () => {
 	});
 
 	const handleSubmit = (event) => {
+
 		event.preventDefault();
 		const payload = {
 			nombre: state.nombre,

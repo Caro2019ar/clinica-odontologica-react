@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SectionTitle from "../components/layout/SectionTitle";
-//import dataOdonto from "../data/dataOdonto.json";
-//import PageTitle from "../components/layout/PageTitle";
+
 import axios from "axios";
 const dataOdonto = "http://localhost:8080/odontologos";
 
@@ -13,8 +12,7 @@ const ListaOdonto = () => {
 			try {
 				let response = await axios(dataOdonto);
 				setUsers(response.data);
-				//let response = dataOdonto;
-				//setUsers(response);
+
 			} catch (error) {
 				console.log("error", error);
 			}

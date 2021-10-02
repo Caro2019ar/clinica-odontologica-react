@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SectionTitle from "../components/layout/SectionTitle";
-//import dataPacientes from "../data/dataPacientes.json";
+
 const dataPacientes = "http://localhost:8080/pacientes";
 
 const ListaPaciente = () => {
@@ -47,7 +47,7 @@ const ListaPaciente = () => {
 								<td>{paciente.nombre}</td>
 								<td>{paciente.apellido}</td>
 								<td>{paciente.dni}</td>
-								<td>{paciente.fechaIngreso}</td>
+								<td>{paciente.fechaHoraIngreso}</td>
 								<td>{paciente.domicilio.provincia}</td>
 							</tr>
 						))}
